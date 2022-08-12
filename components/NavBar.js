@@ -3,14 +3,14 @@ import NavStyle from "../styles/NavBar.module.css";
 const NavBar  = (props)=>{
 
     return(
-            <>
-            <ul className={NavStyle.ul}>
+            <div>
+            <ul className={NavStyle.uly}>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/posts">posts</Link></li>
             </ul>
             {props.children}
             <h1>Footer</h1>
-            </>
+            </div>
     )
 }
 

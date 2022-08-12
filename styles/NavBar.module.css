@@ -1,4 +1,4 @@
-.ul{
+.uly{
     background-color: red;
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
     justify-content: space-between;
       list-style: none;
 }
-.ul > li {
+.uly > li {
   
     padding: 1px;
     margin: 1px;
