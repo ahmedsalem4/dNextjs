@@ -2,21 +2,12 @@
 
 function post(props){
 
-    let posts =  props.post;
-    let allPosts =  posts.map((el) =>{
-      return(
-        <div key={el.id}>
-          
-          <h3>{el.title}</h3>
-          <p>{el.body}</p>
-        </div>
-      )
-    })
-     
       return(
         <div>
           
-         {allPosts}
+        <h1>{props.post.id}</h1>
+        <h3>{props.post.title}</h3>
+        <p>{props.post.body}</p>
     
         </div>
       )
@@ -26,7 +17,7 @@ function post(props){
   
       export async function getStaticPaths(){
   
-        const res = await fetch("http://localhost:3000/api/posts");
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
         const data = await res.json();
   
         const paths = data.map(el =>{
@@ -45,7 +36,7 @@ function post(props){
     export async function getStaticProps(context){
      
       
-      const res = await fetch(`http://localhost:3000/api/posts/${context.params.id}`);
+      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`);
       const data = await res.json();
       
       return {
